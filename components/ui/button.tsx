@@ -11,20 +11,24 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const variantStyles: Record<NonNullable<ButtonProps["variant"]>, string> = {
+  // Monochromatic Solid White Primary CTA (Linear "Sign up" style)
   primary:
-    "bg-accent text-white font-medium border border-white/15 hover:bg-accent-hover hover:border-white/25 active:scale-[0.98] shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_2px_10px_rgba(94,106,210,0.25)]",
+    "bg-white text-canvas font-medium border border-white/20 hover:bg-[#e2e4e6] active:scale-[0.98] shadow-[0_1px_2px_rgba(0,0,0,0.6)]",
+  // Translucent Dark Surface Secondary CTA
   secondary:
     "bg-surface-elevated text-text-primary border border-border-regular hover:bg-surface-active hover:border-border-strong hover:text-white active:scale-[0.98] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]",
+  // Ghost Text Link (Linear "Log in" style)
   ghost:
-    "bg-transparent text-text-muted hover:text-text-primary hover:bg-surface active:scale-[0.98] border border-transparent",
+    "bg-transparent text-text-muted hover:text-text-primary hover:bg-surface/60 active:scale-[0.98] border border-transparent",
+  // Crisp Outline Variant
   outline:
-    "bg-transparent text-text-secondary border border-border-regular hover:border-border-strong hover:text-text-primary hover:bg-surface/50 active:scale-[0.98]",
+    "bg-transparent text-text-primary border border-border-regular hover:border-border-strong hover:bg-surface/50 active:scale-[0.98]",
 };
 
 const sizeStyles: Record<NonNullable<ButtonProps["size"]>, string> = {
-  sm: "h-8 px-3 text-xs rounded-md gap-1.5",
-  md: "h-10 px-4 text-sm rounded-lg gap-2",
-  lg: "h-11 px-5 text-sm sm:text-base rounded-lg gap-2.5",
+  sm: "h-8 px-3.5 text-xs rounded-full gap-1.5",
+  md: "h-9 sm:h-10 px-4 sm:px-5 text-sm rounded-full gap-2",
+  lg: "h-11 px-6 text-sm sm:text-base rounded-full gap-2.5",
 };
 
 export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
@@ -43,7 +47,7 @@ export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, Bu
   ) => {
     const baseClasses = cn(
       "inline-flex items-center justify-center whitespace-nowrap select-none font-medium outline-none",
-      "focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas",
+      "focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-canvas",
       "transition-all duration-150 ease-out cursor-pointer",
       variantStyles[variant],
       sizeStyles[size],

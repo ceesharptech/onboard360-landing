@@ -10,7 +10,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
 
 const badgeVariants = {
   neutral: "bg-surface-elevated text-text-secondary border-border-regular hover:border-border-strong",
-  accent: "bg-accent-subtle text-text-primary border-border-accent/40",
+  accent: "bg-white/10 text-text-primary border-white/20",
   subtle: "bg-surface/80 text-text-muted border-border-subtle",
 };
 
@@ -42,7 +42,7 @@ export function Badge({
         <span
           className={cn(
             "w-1.5 h-1.5 rounded-full shrink-0",
-            variant === "accent" ? "bg-accent" : "bg-text-muted"
+            variant === "accent" ? "bg-white" : "bg-text-muted"
           )}
           aria-hidden="true"
         />

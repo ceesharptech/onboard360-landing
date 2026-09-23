@@ -150,10 +150,20 @@ export default function StyleGuidePage() {
               </div>
 
               <div className="pt-6 border-t border-border-subtle">
-                <span className="text-xs font-mono text-text-faint block mb-2">Section Subheading & Body (16px-18px)</span>
+                <span className="text-xs font-mono text-text-faint block mb-2">Section Subheading (16px-18px)</span>
                 <SectionSubheading className="mt-0">
                   Onboard360 turns scattered checklists, PDFs, and Slack threads into one system: a workflow builder for every role, a document pipeline that organizes itself, and an AI assistant that already knows the answer.
                 </SectionSubheading>
+              </div>
+
+              <div className="pt-6 border-t border-border-subtle">
+                <span className="text-xs font-mono text-text-faint block mb-2">BodyText (Default & Small)</span>
+                <BodyText>
+                  Standard body paragraph using Geist Sans with balanced line height for sustained reading and high scannability.
+                </BodyText>
+                <BodyText size="sm" className="mt-2 text-text-faint">
+                  Secondary body text (14px) for captions, footnotes, and supplementary context.
+                </BodyText>
               </div>
 
               <div className="pt-6 border-t border-border-subtle">

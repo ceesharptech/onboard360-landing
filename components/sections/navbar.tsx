@@ -22,7 +22,8 @@ const navItems: NavItem[] = [
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const shouldReduceMotion = useReducedMotion();
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://app.onboard360.com";
+  const appUrl =
+    process.env.NEXT_PUBLIC_APP_URL || "https://app.onboard360.com";
 
   // Close mobile menu on resize to desktop
   React.useEffect(() => {
@@ -43,25 +44,25 @@ export function Navbar() {
           href="/"
           className="flex items-center gap-2.5 text-text-primary hover:text-white transition-colors group"
         >
-          {/* Minimalist geometric mark placeholder */}
-          <div className="w-7 h-7 rounded-md bg-surface-elevated border border-border-regular flex items-center justify-center group-hover:border-border-strong transition-colors">
-            <div className="w-2.5 h-2.5 rounded-sm bg-accent" />
+          {/* Monochromatic geometric mark */}
+          <div className="w-5 h-5 rounded-full bg-linear-to-r from-white to-neutral-500 flex items-center justify-center group-hover:border-border-strong transition-colors">
+            {/* <div className="w-2.5 h-2.5 rounded-sm bg-white" /> */}
           </div>
-          <span className="font-medium text-base tracking-tight text-text-primary">
+          <span className="font-medium text-base tracking-tight text-white">
             Onboard360
           </span>
         </Link>
 
         {/* Desktop Navigation Links */}
         <nav
-          className="hidden md:flex items-center gap-7 text-sm font-medium text-text-muted"
+          className="hidden md:flex items-center gap-7 text-xs font-normal text-text-muted"
           aria-label="Main Navigation"
         >
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="hover:text-text-primary transition-colors duration-150"
+              className="hover:text-white transition-colors duration-150"
             >
               {item.label}
             </a>
@@ -72,10 +73,11 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <a
             href={appUrl}
-            className="text-sm font-medium text-text-muted hover:text-text-primary transition-colors px-2 py-1"
+            className="text-xs font-normal text-text-muted hover:text-white transition-colors px-2 py-1"
           >
             Log in
           </a>
+          <div className="h-3.5 w-px bg-border-regular" aria-hidden="true" />
           <Button href="mailto:demo@onboard360.com" variant="primary" size="sm">
             Get a demo
           </Button>
@@ -86,7 +88,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="p-2 text-text-muted hover:text-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md"
+            className="p-2 text-text-muted hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-md"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
           >
@@ -103,19 +105,21 @@ export function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -8 }}
+            initial={
+              shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -8 }
+            }
             animate={{ opacity: 1, y: 0 }}
             exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -8 }}
             transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="md:hidden w-full border-b border-border-regular bg-surface/95 backdrop-blur-xl px-6 py-6 shadow-2xl"
+            className="md:hidden w-full border-b border-border-regular bg-surface/95 backdrop-blur-xl px-6 py-6"
           >
-            <nav className="flex flex-col gap-4 text-base font-medium text-text-secondary">
+            <nav className="flex flex-col gap-4 text-base font-normal text-text-secondary">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="py-1 hover:text-text-primary transition-colors"
+                  className="py-1 hover:text-white transition-colors"
                 >
                   {item.label}
                 </a>
@@ -123,7 +127,7 @@ export function Navbar() {
               <div className="pt-4 mt-2 border-t border-border-subtle flex flex-col gap-3">
                 <a
                   href={appUrl}
-                  className="py-2 text-center text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+                  className="py-2 text-center text-sm font-medium text-text-secondary hover:text-white transition-colors"
                 >
                   Log in
                 </a>
