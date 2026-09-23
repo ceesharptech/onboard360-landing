@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/sections/navbar";
 import { Hero } from "@/components/sections/hero";
+import { SocialProof } from "@/components/sections/social-proof";
+import { Features } from "@/components/sections/features";
 
 export default function Home() {
   return (
@@ -10,6 +12,12 @@ export default function Home() {
       <main className="flex-1 flex flex-col">
         {/* 2. Hero Section */}
         <Hero />
+
+        {/* 3. Social Proof Strip */}
+        <SocialProof />
+
+        {/* 4. Core Features Section */}
+        <Features />
       </main>
     </div>
   );

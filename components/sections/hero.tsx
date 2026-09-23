@@ -30,59 +30,7 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-24">
-      {/* Animated Monochromatic Linear-Upward Background Gradient & Noise Texture */}
-      <div
-        className="pointer-events-none absolute inset-0 overflow-hidden -z-10"
-        aria-hidden="true"
-      >
-        {/* Soft, slow breathing linear-upward gradient */}
-        <motion.div
-          animate={
-            shouldReduceMotion
-              ? { opacity: 0.85, scale: 1 }
-              : {
-                  opacity: [0.65, 0.95, 0.65],
-                  scaleY: [1, 1.06, 1],
-                  y: [0, -10, 0],
-                }
-          }
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute inset-x-0 bottom-0 h-[700px] bg-gradient-to-t from-white/[0.08] via-white/[0.025] to-transparent origin-bottom"
-        />
-
-        {/* Ambient subtle central beam */}
-        <motion.div
-          animate={
-            shouldReduceMotion
-              ? { opacity: 0.5 }
-              : {
-                  opacity: [0.4, 0.7, 0.4],
-                  scale: [0.96, 1.04, 0.96],
-                }
-          }
-          transition={{
-            duration: 16,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute -top-24 sm:-top-36 left-1/2 -translate-x-1/2 w-[700px] h-[450px] sm:w-[950px] sm:h-[550px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.06),transparent_65%)] blur-3xl"
-        />
-
-        {/* Fine Grain / Noise Texture Overlay */}
-        <div
-          className="absolute inset-0 opacity-[0.035] mix-blend-screen"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-            backgroundRepeat: "repeat",
-          }}
-        />
-      </div>
-
-      <Container className="flex flex-col items-start text-left">
+      <Container className="flex flex-col items-start text-left z-20">
         {/* Eyebrow Label */}
         <motion.div
           initial="hidden"

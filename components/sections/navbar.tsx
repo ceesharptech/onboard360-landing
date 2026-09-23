@@ -2,10 +2,10 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { List, X } from "@phosphor-icons/react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { cn } from "@/lib/utils";
 
 interface NavItem {
   label: string;
@@ -83,20 +83,33 @@ export function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile Menu Trigger */}
-        <div className="flex md:hidden items-center gap-2">
+        {/* Mobile Menu Trigger (Two horizontal lines that animate into an X) */}
+        <div className="flex md:hidden items-center">
           <button
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="p-2 text-text-muted hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-md"
+            className="relative flex items-center justify-center w-9 h-9 text-text-muted hover:text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-white/30 rounded-md transition-colors"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? (
-              <X size={20} weight="regular" />
-            ) : (
-              <List size={20} weight="regular" />
-            )}
+            <div className="relative w-4 h-4 flex items-center justify-center">
+              <span
+                className={cn(
+                  "absolute w-4 h-[1.5px] bg-white rounded-full transition-transform duration-200 ease-out origin-center",
+                  mobileMenuOpen
+                    ? "rotate-45 translate-y-0"
+                    : "-translate-y-[3.5px]",
+                )}
+              />
+              <span
+                className={cn(
+                  "absolute w-4 h-[1.5px] bg-white rounded-full transition-transform duration-200 ease-out origin-center",
+                  mobileMenuOpen
+                    ? "-rotate-45 translate-y-0"
+                    : "translate-y-[3.5px]",
+                )}
+              />
+            </div>
           </button>
         </div>
       </Container>
