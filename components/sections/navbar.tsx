@@ -99,7 +99,16 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full h-16 border-b border-border-subtle bg-canvas/80 backdrop-blur-md transition-colors">
+      <motion.header
+        initial={shouldReduceMotion ? { opacity: 0 } : { y: -64, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.6,
+          delay: 0.55,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+        className="sticky top-0 z-50 w-full h-16 border-b border-border-subtle bg-canvas/80 backdrop-blur-md transition-colors"
+      >
         <Container className="h-full flex items-center justify-between">
           {/* Logo Slot */}
           <Link
@@ -180,7 +189,7 @@ export function Navbar() {
             </button>
           </div>
         </Container>
-      </header>
+      </motion.header>
 
       {/* Mobile Menu Overlay: Rendered outside <header> so position: fixed references the true viewport */}
       <AnimatePresence>

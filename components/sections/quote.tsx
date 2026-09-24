@@ -8,7 +8,7 @@ export function Quote() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative w-full py-20 sm:py-28 lg:py-32 overflow-hidden border-y border-border-subtle/60">
+    <section className="relative w-full py-16 sm:py-20 lg:py-24 overflow-hidden border-y border-border-subtle/60">
       {/* Subtle Ambient Radial Glow */}
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] sm:w-[700px] h-[260px] bg-white/[0.025] blur-[120px] rounded-full"
