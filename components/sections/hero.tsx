@@ -74,7 +74,7 @@ export function Hero() {
               as="h1"
               className="text-4xl sm:text-4xl lg:text-5xl font-medium tracking-[-0.035em] leading-[1.15] text-white text-left"
             >
-              The onboarding system for modern teams
+              The onboarding system for modern teams and agencies
             </SectionHeading>
           </motion.div>
 
@@ -114,16 +114,16 @@ export function Hero() {
           >
             {/* Framed container */}
             <div className="relative rounded-l-xl sm:rounded-xl border-y border-l sm:border-r border-border-regular bg-surface-subtle p-1.5 sm:p-3 shadow-md shadow-black/20 overflow-hidden">
-              <div className="relative h-[380px] sm:h-auto sm:aspect-[16/9] w-full overflow-hidden rounded-l-lg sm:rounded-lg border-y border-l sm:border-r border-border-subtle bg-surface">
+              <div className="relative h-[380px] sm:h-auto sm:aspect-[17.4/9.5] w-full overflow-hidden rounded-l-lg sm:rounded-lg border-y border-l sm:border-r border-border-subtle bg-surface">
                 {/* Visual wrapper: on mobile, renders full desktop scale (780px wide) showing the left half; on sm+ fills the 16:9 frame */}
-                <div className="relative w-[780px] h-[460px] sm:w-full sm:h-full max-w-none origin-top-left shrink-0">
+                <div className="relative w-[900px] h-[490px] sm:w-full sm:h-full max-w-none origin-top-left shrink-0">
                   <Image
-                    src="/images/hero-placeholder.svg"
-                    alt="Onboard360 product workflow and document management interface preview"
+                    src="/images/hero-onb360.png"
+                    alt="Onboard360 HR Administration employee management interface preview"
                     fill
                     priority
                     sizes="(max-width: 640px) 780px, (max-width: 1280px) 100vw, 1280px"
-                    className="object-cover object-left-top"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -131,7 +131,7 @@ export function Hero() {
 
             {/* Dark blurry element covering the image container from the edge of the actual page */}
             <div
-              className="sm:hidden pointer-events-none absolute right-0 top-0 bottom-0 w-28 bg-gradient-to-l from-canvas to-transparent backdrop-blur-[2px] [-webkit-backdrop-filter:blur(6px)] z-20"
+              className="sm:hidden pointer-events-none absolute right-0 top-0 bottom-0 w-28 bg-gradient-to-l from-canvas to-transparent [-webkit-backdrop-filter:blur(6px)] z-20"
               aria-hidden="true"
             />
 

@@ -52,7 +52,7 @@ function AnimatedCounter({
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const shouldReduceMotion = useReducedMotion();
   const [displayValue, setDisplayValue] = React.useState(
-    shouldReduceMotion ? target : 0
+    shouldReduceMotion ? target : 0,
   );
 
   React.useEffect(() => {
@@ -130,7 +130,7 @@ export function Stats() {
         </motion.div>
 
         {/* 4-Up Stat Metrics Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={index}

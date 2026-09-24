@@ -1,9 +1,8 @@
 "use client";
 
-import * as React from "react";
 import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "motion/react";
-import { CheckSquareOffset, Files, Sparkle } from "@phosphor-icons/react";
+import { CheckCircleIcon, FilesIcon } from "@phosphor-icons/react";
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import {
@@ -64,38 +63,31 @@ export function Features() {
           >
             {/* Text Column */}
             <div className="lg:col-span-5 flex flex-col items-start text-left">
-              {/* <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-border-regular bg-surface-elevated/70 backdrop-blur-xs mb-4">
-                <CheckSquareOffset
-                  size={14}
-                  weight="bold"
-                  className="text-white"
-                  aria-hidden="true"
-                />
-                <span className="font-mono text-xs uppercase tracking-wider text-text-secondary">
-                  Workflow Builder
-                </span>
-              </div> */}
-
               <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white leading-snug">
-                Checklists that know who they&apos;re for
+                Checklists that know who
+                <span className="flex items-center gap-1">
+                  they&apos;re for{" "}
+                  <CheckCircleIcon
+                    className="text-green-500 w-8 h-8 hover:text-green-400 hover:scale-125 transition-all duration-300"
+                    weight="fill"
+                  />
+                </span>
               </h3>
 
               <p className="mt-3.5 text-base text-text-muted leading-relaxed max-w-[50ch]">
-                Build onboarding paths once, per role: engineering, sales,
-                support, whatever your org looks like. Assign it, and every new
-                hire gets exactly the steps that apply to them. Nothing generic,
-                nothing missed.
+                Build onboarding paths once, per role - Assign it, and every new
+                hire gets exactly the steps that apply to them. Nothing missed.
               </p>
             </div>
 
             {/* Visual Column */}
             <div className="lg:col-span-7 w-full">
               <div className="relative w-full">
-                <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-2.5 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong overflow-hidden">
-                  <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
+                <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-1.5 sm:p-2 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong overflow-hidden">
+                  <div className="relative aspect-[17.5/9.5] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
                     <Image
-                      src="/images/feature-workflow.svg"
-                      alt="Onboard360 Workflow Builder interface showing role-specific checklist paths"
+                      src="/images/checklist-onb360.png"
+                      alt="Onboard360 role-based onboarding checklist and roadmap interface preview"
                       fill
                       sizes="(max-width: 1024px) 100vw, 58vw"
                       className="object-cover object-top"
@@ -105,7 +97,7 @@ export function Features() {
 
                 {/* Dark shadow overlay covering part of the entire card (similar to hero product display, no blur) */}
                 <div
-                  className="pointer-events-none absolute right-0 top-0 bottom-0 w-28 sm:w-44 lg:w-64 bg-gradient-to-l from-canvas via-canvas/80 to-transparent z-20 rounded-r-xl"
+                  className="pointer-events-none absolute right-0 top-0 bottom-0 w-28 sm:w-44 lg:w-64 bg-gradient-to-l from-canvas via-canvas/70 to-transparent z-20 rounded-r-xl"
                   aria-hidden="true"
                 />
               </div>
@@ -123,11 +115,11 @@ export function Features() {
             {/* Visual Column (Appears on left at desktop, below text on mobile) */}
             <div className="lg:col-span-7 order-2 lg:order-1 w-full">
               <div className="relative w-full">
-                <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-2.5 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong overflow-hidden">
-                  <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
+                <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-1.5 sm:p-2 transition-colors duration-300 hover:border-border-strong overflow-hidden">
+                  <div className="relative aspect-[17.5/9.5] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
                     <Image
-                      src="/images/feature-pipeline.svg"
-                      alt="Onboard360 Document Pipeline interface organizing and tagging onboarding policies and handbooks"
+                      src="/images/document-onb360.png"
+                      alt="Onboard360 company-wide document library and policy management interface preview"
                       fill
                       sizes="(max-width: 1024px) 100vw, 58vw"
                       className="object-cover object-top"
@@ -137,7 +129,7 @@ export function Features() {
 
                 {/* Dark shadow overlay covering part of the entire card (similar to hero product display, no blur) */}
                 <div
-                  className="pointer-events-none absolute right-0 top-0 bottom-0 w-28 sm:w-44 lg:w-64 bg-gradient-to-l from-canvas via-canvas/80 to-transparent z-20 rounded-r-xl"
+                  className="pointer-events-none absolute left-0 top-0 bottom-0 w-28 sm:w-44 lg:w-64 bg-gradient-to-r from-canvas via-canvas/70 to-transparent z-20 "
                   aria-hidden="true"
                 />
               </div>
@@ -145,27 +137,20 @@ export function Features() {
 
             {/* Text Column (Appears on right at desktop, first on mobile) */}
             <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-start text-left">
-              {/* <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-border-regular bg-surface-elevated/70 backdrop-blur-xs mb-4">
-                <Files
-                  size={14}
-                  weight="bold"
-                  className="text-white"
-                  aria-hidden="true"
-                />
-                <span className="font-mono text-xs uppercase tracking-wider text-text-secondary">
-                  Document Pipeline
-                </span>
-              </div> */}
-
-              <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white leading-snug">
+              <h3 className="flex items-center gap-1 text-2xl sm:text-3xl font-medium tracking-tight text-white leading-snug">
                 Paperwork that files itself
+                {
+                  <FilesIcon
+                    className="text-blue-500 w-10 h-10 rotate-[15deg] hover:text-blue-400 hover:scale-125 hover:rotate-[20deg] transition-all duration-300"
+                    weight="fill"
+                  />
+                }
               </h3>
 
               <p className="mt-3.5 text-base text-text-muted leading-relaxed max-w-[50ch]">
                 Upload it once. Onboard360&apos;s document pipeline routes,
                 tags, and stores every policy, form, and handbook, so nothing
-                lives in someone&apos;s downloads folder, and nothing gets
-                handed to a new hire twice.
+                lives in someone&apos;s downloads folder.
               </p>
             </div>
           </motion.div>
@@ -181,18 +166,6 @@ export function Features() {
           >
             {/* Feature 3 Top Header Block */}
             <div className="max-w-3xl mb-8 sm:mb-10">
-              {/* <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-border-regular bg-surface-elevated/70 backdrop-blur-xs mb-4">
-                <Sparkle
-                  size={14}
-                  weight="bold"
-                  className="text-white"
-                  aria-hidden="true"
-                />
-                <span className="font-mono text-xs uppercase tracking-wider text-text-secondary">
-                  Qorra Assistant
-                </span>
-              </div> */}
-
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-white leading-snug">
                 An assistant that&apos;s actually read the handbook
               </h3>
@@ -205,26 +178,31 @@ export function Features() {
             </div>
 
             {/* Feature 3 Wide Showcase Canvas */}
-            <div className="w-full">
+            <div className="relative w-full">
               <div className="relative w-full">
-                <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-3 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong overflow-hidden">
+                <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-1.5 sm:p-2 transition-colors duration-300 hover:border-border-strong overflow-hidden">
                   <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
-                    <Image
-                      src="/images/feature-qorra.svg"
-                      alt="Onboard360 Qorra assistant interface demonstrating verified document grounding and answers"
-                      fill
-                      sizes="(max-width: 1280px) 100vw, 1280px"
-                      className="object-cover object-top"
-                    />
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="auto"
+                      className="w-full h-full object-cover object-top block"
+                    >
+                      <source src="/video/qorra-demo.webm" type="video/webm" />
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                 </div>
 
                 {/* Dark shadow overlay covering part of the entire card (similar to hero product display, no blur) */}
-                <div
-                  className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 sm:w-56 lg:w-80 bg-gradient-to-l from-canvas via-canvas/80 to-transparent z-20 rounded-r-xl"
+                {/* <div
+                  className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 sm:w-56 lg:w-56 bg-gradient-to-l from-canvas via-canvas/80 to-transparent z-20 rounded-r-xl"
                   aria-hidden="true"
-                />
+                /> */}
               </div>
+              <div className="absolute inset-0 z-10 shadow-[inset_0_0_100px_30px_rgba(3,2,2,1)] sm:shadow-[inset_0_0_100px_50px_rgba(3,2,2,1)] pointer-events-none" />
             </div>
           </motion.div>
         </div>

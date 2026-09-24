@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/sections/navbar";
 import { Hero } from "@/components/sections/hero";
-import { SocialProof } from "@/components/sections/social-proof";
+import { Quote } from "@/components/sections/quote";
 import { Features } from "@/components/sections/features";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { Stats } from "@/components/sections/stats";
@@ -17,8 +17,8 @@ export default function Home() {
         {/* 2. Hero Section */}
         <Hero />
 
-        {/* 3. Social Proof Strip */}
-        <SocialProof />
+        {/* 3. The Operating Thesis Quote Section */}
+        <Quote />
 
         {/* 4. Core Features Section */}
         <Features />

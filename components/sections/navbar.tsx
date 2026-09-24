@@ -49,6 +49,54 @@ export function Navbar() {
     };
   }, [mobileMenuOpen]);
 
+  // Smooth scroll handler with mobile menu dismiss sequence
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.slice(1);
+      const element = document.getElementById(targetId);
+
+      if (mobileMenuOpen) {
+        // 1. Immediately unlock document body so scroll can happen smoothly
+        document.body.style.overflow = "";
+        // 2. Animate close the mobile menu
+        setMobileMenuOpen(false);
+
+        // 3. Initiate quick smooth scroll synchronized with menu exit
+        setTimeout(() => {
+          if (element) {
+            const navHeight = 64;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - navHeight - 16;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+            window.history.pushState(null, "", href);
+          }
+        }, 160);
+      } else {
+        if (element) {
+          const navHeight = 64;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - navHeight - 16;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+          window.history.pushState(null, "", href);
+        }
+      }
+    }
+  };
+
   return (
     <>
       <header className="sticky top-0 z-50 w-full h-16 border-b border-border-subtle bg-canvas/80 backdrop-blur-md transition-colors">
@@ -76,7 +124,8 @@ export function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className="hover:text-white transition-colors duration-150"
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="hover:text-white transition-colors duration-150 cursor-pointer"
               >
                 {item.label}
               </a>
@@ -150,8 +199,8 @@ export function Navbar() {
                 <a
                   key={item.label}
                   href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="py-1 text-white hover:text-text-secondary transition-colors"
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="py-1 text-white hover:text-text-secondary transition-colors cursor-pointer"
                 >
                   {item.label}
                 </a>

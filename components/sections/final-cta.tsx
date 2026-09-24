@@ -46,22 +46,10 @@ export function FinalCta() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={getVariants(0)}
-          className="text-3xl sm:text-5xl lg:text-6xl font-medium tracking-[-0.035em] leading-[1.1] text-white max-w-3xl"
+          className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-[-0.035em] leading-[1.2] text-white max-w-3xl"
         >
           Stop onboarding from a spreadsheet.
         </motion.h2>
-
-        {/* Closing Subheadline */}
-        {/* <motion.p
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={getVariants(0.1)}
-          className="text-base sm:text-lg text-text-muted max-w-xl mx-auto mt-4 sm:mt-5 leading-relaxed"
-        >
-          See Onboard360 running against your own onboarding checklist in 20
-          minutes.
-        </motion.p> */}
 
         {/* Primary Call-to-Action */}
         <motion.div
