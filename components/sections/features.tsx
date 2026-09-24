@@ -64,11 +64,11 @@ export function Features() {
             {/* Text Column */}
             <div className="lg:col-span-5 flex flex-col items-start text-left">
               <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white leading-snug">
-                Checklists that know who
-                <span className="flex items-center gap-1">
-                  they&apos;re for{" "}
+                Checklists that know who{" "}
+                <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
+                  they&apos;re for
                   <CheckCircleIcon
-                    className="text-green-500 w-8 h-8 hover:text-green-400 hover:scale-125 transition-all duration-300"
+                    className="text-green-500 w-7 h-7 sm:w-8 sm:h-8 hover:text-green-400 hover:scale-125 transition-all duration-300 shrink-0"
                     weight="fill"
                   />
                 </span>
@@ -137,14 +137,12 @@ export function Features() {
 
             {/* Text Column (Appears on right at desktop, first on mobile) */}
             <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-start text-left">
-              <h3 className="flex items-center gap-1 text-2xl sm:text-3xl font-medium tracking-tight text-white leading-snug">
-                Paperwork that files itself
-                {
-                  <FilesIcon
-                    className="text-blue-500 w-10 h-10 rotate-[15deg] hover:text-blue-400 hover:scale-125 hover:rotate-[20deg] transition-all duration-300"
-                    weight="fill"
-                  />
-                }
+              <h3 className="flex flex-wrap items-center gap-2 text-2xl sm:text-3xl font-medium tracking-tight text-white leading-snug">
+                <span>Paperwork that files itself</span>
+                <FilesIcon
+                  className="text-blue-500 w-8 h-8 sm:w-10 sm:h-10 rotate-[15deg] hover:text-blue-400 hover:scale-125 hover:rotate-[20deg] transition-all duration-300 shrink-0"
+                  weight="fill"
+                />
               </h3>
 
               <p className="mt-3.5 text-base text-text-muted leading-relaxed max-w-[50ch]">

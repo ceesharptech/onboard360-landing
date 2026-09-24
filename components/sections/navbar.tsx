@@ -164,7 +164,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="relative flex items-center justify-center w-9 h-9 text-text-muted hover:text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-white/30 rounded-md transition-colors"
+              className="relative flex items-center justify-center w-10 h-10 text-text-muted hover:text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-white/30 rounded-md transition-colors"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
             >
@@ -203,13 +203,13 @@ export function Navbar() {
             transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
             className="md:hidden fixed inset-x-0 top-16 h-[calc(100dvh-4rem)] z-40 bg-[#030202]/80 backdrop-blur-2xl [-webkit-backdrop-filter:blur(24px)] border-b border-border-regular px-6 py-8 flex flex-col justify-between"
           >
-            <nav className="flex flex-col gap-6 text-lg font-normal text-text-secondary">
+            <nav className="flex flex-col gap-3 text-lg font-normal text-text-secondary">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="py-1 text-white hover:text-text-secondary transition-colors cursor-pointer"
+                  className="min-h-[44px] flex items-center py-2 text-white hover:text-text-secondary transition-colors cursor-pointer"
                 >
                   {item.label}
                 </a>
@@ -219,15 +219,15 @@ export function Navbar() {
             <div className="pt-6 border-t border-border-subtle flex flex-col gap-3">
               <a
                 href={appUrl}
-                className="py-2.5 text-center text-sm font-medium text-text-secondary hover:text-white transition-colors"
+                className="min-h-[44px] flex items-center justify-center py-2.5 text-center text-sm font-medium text-text-secondary hover:text-white transition-colors"
               >
                 Log in
               </a>
               <Button
                 href={DEMO_MAILTO_URL}
                 variant="primary"
-                size="md"
-                className="w-full"
+                size="lg"
+                className="w-full h-11"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get a demo

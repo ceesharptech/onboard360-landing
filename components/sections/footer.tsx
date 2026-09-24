@@ -27,8 +27,8 @@ const footerColumns: FooterColumn[] = [
   {
     title: "Legal",
     links: [
-      { label: "Privacy", href: "#" },
-      { label: "Terms", href: "#" },
+      { label: "Privacy", href: "/privacy" },
+      { label: "Terms", href: "/terms" },
     ],
   },
 ];
@@ -61,15 +61,24 @@ export function Footer() {
               <h3 className="text-xs font-medium uppercase tracking-[0.14em] text-text-secondary select-none">
                 {column.title}
               </h3>
-              <ul className="flex flex-col gap-2.5 text-sm">
+              <ul className="flex flex-col gap-1.5 text-sm">
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-text-muted hover:text-text-primary transition-colors duration-150"
-                    >
-                      {link.label}
-                    </a>
+                    {link.href.startsWith("/") ? (
+                      <Link
+                        href={link.href}
+                        className="text-text-muted hover:text-text-primary transition-colors duration-150 py-1 inline-block"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-text-muted hover:text-text-primary transition-colors duration-150 py-1 inline-block"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -81,12 +90,18 @@ export function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-faint">
           <p>© 2026 Onboard360. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#privacy" className="hover:text-text-muted transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-text-muted transition-colors py-1 inline-block"
+            >
               Privacy Policy
-            </a>
-            <a href="#terms" className="hover:text-text-muted transition-colors">
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-text-muted transition-colors py-1 inline-block"
+            >
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </Container>
