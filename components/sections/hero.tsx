@@ -86,24 +86,41 @@ export function Hero() {
           </Button>
         </motion.div>
 
-        {/* Hero Visual Preview (Wide framed container matching Linear's screenshot aesthetic) */}
+        {/* Hero Visual Preview (Linear mobile crop: full-scale cut in half with dark blur overlay covering from page edge; desktop: full 16:9 frame) */}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={getVariants(0.38)}
-          className="relative mx-auto mt-12 sm:mt-16 w-full rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-3 shadow-lg shadow-black/80"
+          className="relative mt-12 sm:mt-16 w-[calc(100%+1rem)] -mr-4 sm:w-full sm:mr-0 sm:mx-auto"
         >
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
-            {/* next/image placeholder: swapping later is a single-line change to the src */}
-            <Image
-              src="/images/hero-placeholder.svg"
-              alt="Onboard360 product workflow and document management interface preview"
-              fill
-              priority
-              sizes="(max-width: 1280px) 100vw, 1280px"
-              className="object-cover object-top"
-            />
+          {/* Framed container */}
+          <div className="relative rounded-l-xl sm:rounded-xl border-y border-l sm:border-r border-border-regular bg-surface-subtle p-1.5 sm:p-3 shadow-md shadow-black/20 overflow-hidden">
+            <div className="relative h-[380px] sm:h-auto sm:aspect-[16/9] w-full overflow-hidden rounded-l-lg sm:rounded-lg border-y border-l sm:border-r border-border-subtle bg-surface">
+              {/* Visual wrapper: on mobile, renders full desktop scale (780px wide) showing the left half; on sm+ fills the 16:9 frame */}
+              <div className="relative w-[780px] h-[460px] sm:w-full sm:h-full max-w-none origin-top-left shrink-0">
+                <Image
+                  src="/images/hero-placeholder.svg"
+                  alt="Onboard360 product workflow and document management interface preview"
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 780px, (max-width: 1280px) 100vw, 1280px"
+                  className="object-cover object-left-top"
+                />
+              </div>
+            </div>
           </div>
+
+          {/* Dark blurry element covering the image container from the edge of the actual page */}
+          <div
+            className="sm:hidden pointer-events-none absolute right-0 top-0 bottom-0 w-28 bg-gradient-to-l from-canvas to-transparent backdrop-blur-[2px] [-webkit-backdrop-filter:blur(6px)] z-20"
+            aria-hidden="true"
+          />
+
+          {/* Dark gradient fade covering the bottom of the image container into the page */}
+          {/* <div
+            className="sm:hidden pointer-events-none absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-canvas via-canvas/70 to-transparent z-20"
+            aria-hidden="true"
+          /> */}
         </motion.div>
       </Container>
     </section>

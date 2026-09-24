@@ -64,7 +64,7 @@ export function Features() {
           >
             {/* Text Column */}
             <div className="lg:col-span-5 flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-border-regular bg-surface-elevated/70 backdrop-blur-xs mb-4">
+              {/* <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-border-regular bg-surface-elevated/70 backdrop-blur-xs mb-4">
                 <CheckSquareOffset
                   size={14}
                   weight="bold"
@@ -74,7 +74,7 @@ export function Features() {
                 <span className="font-mono text-xs uppercase tracking-wider text-text-secondary">
                   Workflow Builder
                 </span>
-              </div>
+              </div> */}
 
               <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white leading-snug">
                 Checklists that know who they&apos;re for
@@ -90,7 +90,7 @@ export function Features() {
 
             {/* Visual Column */}
             <div className="lg:col-span-7 w-full">
-              <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-2.5 shadow-2xl shadow-black/80 transition-colors duration-300 hover:border-border-strong">
+              <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-2.5 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong">
                 <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
                   <Image
                     src="/images/feature-workflow.svg"
@@ -114,7 +114,7 @@ export function Features() {
           >
             {/* Visual Column (Appears on left at desktop, below text on mobile) */}
             <div className="lg:col-span-7 order-2 lg:order-1 w-full">
-              <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-2.5 shadow-2xl shadow-black/80 transition-colors duration-300 hover:border-border-strong">
+              <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-2.5 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong">
                 <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
                   <Image
                     src="/images/feature-pipeline.svg"
@@ -129,7 +129,7 @@ export function Features() {
 
             {/* Text Column (Appears on right at desktop, first on mobile) */}
             <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-border-regular bg-surface-elevated/70 backdrop-blur-xs mb-4">
+              {/* <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-border-regular bg-surface-elevated/70 backdrop-blur-xs mb-4">
                 <Files
                   size={14}
                   weight="bold"
@@ -139,17 +139,17 @@ export function Features() {
                 <span className="font-mono text-xs uppercase tracking-wider text-text-secondary">
                   Document Pipeline
                 </span>
-              </div>
+              </div> */}
 
               <h3 className="text-2xl sm:text-3xl font-medium tracking-tight text-white leading-snug">
                 Paperwork that files itself
               </h3>
 
               <p className="mt-3.5 text-base text-text-muted leading-relaxed max-w-[50ch]">
-                Upload it once. Onboard360&apos;s document pipeline routes, tags,
-                and stores every policy, form, and handbook, so nothing lives in
-                someone&apos;s downloads folder, and nothing gets handed to a new
-                hire twice.
+                Upload it once. Onboard360&apos;s document pipeline routes,
+                tags, and stores every policy, form, and handbook, so nothing
+                lives in someone&apos;s downloads folder, and nothing gets
+                handed to a new hire twice.
               </p>
             </div>
           </motion.div>
@@ -165,7 +165,7 @@ export function Features() {
           >
             {/* Feature 3 Top Header Block */}
             <div className="max-w-3xl mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-border-regular bg-surface-elevated/70 backdrop-blur-xs mb-4">
+              {/* <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-border-regular bg-surface-elevated/70 backdrop-blur-xs mb-4">
                 <Sparkle
                   size={14}
                   weight="bold"
@@ -175,22 +175,22 @@ export function Features() {
                 <span className="font-mono text-xs uppercase tracking-wider text-text-secondary">
                   Qorra Assistant
                 </span>
-              </div>
+              </div> */}
 
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-medium tracking-tight text-white leading-snug">
                 An assistant that&apos;s actually read the handbook
               </h3>
 
               <p className="mt-3.5 text-base sm:text-lg text-text-muted leading-relaxed max-w-[62ch]">
-                Qorra is grounded in your company&apos;s own documents: policies,
-                guides, FAQs. New hires ask a question, Qorra answers from what
-                your company actually wrote, not a generic script.
+                Qorra is grounded in your company&apos;s own documents:
+                policies, guides, FAQs. New hires ask a question, Qorra answers
+                from what your company actually wrote, not a generic script.
               </p>
             </div>
 
             {/* Feature 3 Wide Showcase Canvas */}
             <div className="w-full">
-              <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-3 shadow-2xl shadow-black/80 transition-colors duration-300 hover:border-border-strong">
+              <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-3 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong">
                 <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
                   <Image
                     src="/images/feature-qorra.svg"
