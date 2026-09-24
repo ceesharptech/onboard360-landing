@@ -90,16 +90,24 @@ export function Features() {
 
             {/* Visual Column */}
             <div className="lg:col-span-7 w-full">
-              <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-2.5 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong">
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
-                  <Image
-                    src="/images/feature-workflow.svg"
-                    alt="Onboard360 Workflow Builder interface showing role-specific checklist paths"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 58vw"
-                    className="object-cover object-top"
-                  />
+              <div className="relative w-full">
+                <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-2.5 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong overflow-hidden">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
+                    <Image
+                      src="/images/feature-workflow.svg"
+                      alt="Onboard360 Workflow Builder interface showing role-specific checklist paths"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 58vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
                 </div>
+
+                {/* Dark shadow overlay covering part of the entire card (similar to hero product display, no blur) */}
+                <div
+                  className="pointer-events-none absolute right-0 top-0 bottom-0 w-28 sm:w-44 lg:w-64 bg-gradient-to-l from-canvas via-canvas/80 to-transparent z-20 rounded-r-xl"
+                  aria-hidden="true"
+                />
               </div>
             </div>
           </motion.div>
@@ -114,16 +122,24 @@ export function Features() {
           >
             {/* Visual Column (Appears on left at desktop, below text on mobile) */}
             <div className="lg:col-span-7 order-2 lg:order-1 w-full">
-              <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-2.5 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong">
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
-                  <Image
-                    src="/images/feature-pipeline.svg"
-                    alt="Onboard360 Document Pipeline interface organizing and tagging onboarding policies and handbooks"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 58vw"
-                    className="object-cover object-top"
-                  />
+              <div className="relative w-full">
+                <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-2.5 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong overflow-hidden">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
+                    <Image
+                      src="/images/feature-pipeline.svg"
+                      alt="Onboard360 Document Pipeline interface organizing and tagging onboarding policies and handbooks"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 58vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
                 </div>
+
+                {/* Dark shadow overlay covering part of the entire card (similar to hero product display, no blur) */}
+                <div
+                  className="pointer-events-none absolute right-0 top-0 bottom-0 w-28 sm:w-44 lg:w-64 bg-gradient-to-l from-canvas via-canvas/80 to-transparent z-20 rounded-r-xl"
+                  aria-hidden="true"
+                />
               </div>
             </div>
 
@@ -190,16 +206,24 @@ export function Features() {
 
             {/* Feature 3 Wide Showcase Canvas */}
             <div className="w-full">
-              <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-3 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong">
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
-                  <Image
-                    src="/images/feature-qorra.svg"
-                    alt="Onboard360 Qorra assistant interface demonstrating verified document grounding and answers"
-                    fill
-                    sizes="(max-width: 1280px) 100vw, 1280px"
-                    className="object-cover object-top"
-                  />
+              <div className="relative w-full">
+                <div className="relative rounded-xl border border-border-regular bg-surface-subtle p-2 sm:p-3 shadow-sm shadow-black/80 transition-colors duration-300 hover:border-border-strong overflow-hidden">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-border-subtle bg-surface">
+                    <Image
+                      src="/images/feature-qorra.svg"
+                      alt="Onboard360 Qorra assistant interface demonstrating verified document grounding and answers"
+                      fill
+                      sizes="(max-width: 1280px) 100vw, 1280px"
+                      className="object-cover object-top"
+                    />
+                  </div>
                 </div>
+
+                {/* Dark shadow overlay covering part of the entire card (similar to hero product display, no blur) */}
+                <div
+                  className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 sm:w-56 lg:w-80 bg-gradient-to-l from-canvas via-canvas/80 to-transparent z-20 rounded-r-xl"
+                  aria-hidden="true"
+                />
               </div>
             </div>
           </motion.div>

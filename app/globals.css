@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-canvas: #08090a;
+  --color-canvas: #030202;
   --color-surface-subtle: #0f1011;
   --color-surface: #141517;
   --color-surface-elevated: #191a1c;
@@ -24,8 +24,12 @@
   --color-accent-subtle: rgba(255, 255, 255, 0.08);
   --color-accent-glow: rgba(255, 255, 255, 0.06);
 
-  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans:
+    var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --font-mono:
+    var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, monospace;
 }
 
 :root {

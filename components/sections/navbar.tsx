@@ -6,6 +6,7 @@ import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
+import { DEMO_MAILTO_URL } from "@/lib/constants";
 
 interface NavItem {
   label: string;
@@ -92,7 +93,7 @@ export function Navbar() {
             </a>
             <div className="h-3.5 w-px bg-border-regular" aria-hidden="true" />
             <Button
-              href="mailto:demo@onboard360.com"
+              href={DEMO_MAILTO_URL}
               variant="primary"
               size="sm"
             >
@@ -142,7 +143,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -6 }}
             transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="md:hidden fixed inset-x-0 top-16 h-[calc(100dvh-4rem)] z-40 bg-[#08090a]/80 backdrop-blur-2xl [-webkit-backdrop-filter:blur(24px)] border-b border-border-regular px-6 py-8 flex flex-col justify-between"
+            className="md:hidden fixed inset-x-0 top-16 h-[calc(100dvh-4rem)] z-40 bg-[#030202]/80 backdrop-blur-2xl [-webkit-backdrop-filter:blur(24px)] border-b border-border-regular px-6 py-8 flex flex-col justify-between"
           >
             <nav className="flex flex-col gap-6 text-lg font-normal text-text-secondary">
               {navItems.map((item) => (
@@ -165,7 +166,7 @@ export function Navbar() {
                 Log in
               </a>
               <Button
-                href="mailto:demo@onboard360.com"
+                href={DEMO_MAILTO_URL}
                 variant="primary"
                 size="md"
                 className="w-full"

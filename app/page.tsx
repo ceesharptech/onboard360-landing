@@ -3,6 +3,9 @@ import { Hero } from "@/components/sections/hero";
 import { SocialProof } from "@/components/sections/social-proof";
 import { Features } from "@/components/sections/features";
 import { HowItWorks } from "@/components/sections/how-it-works";
+import { Stats } from "@/components/sections/stats";
+import { FinalCta } from "@/components/sections/final-cta";
+import { Footer } from "@/components/sections/footer";
 
 export default function Home() {
   return (
@@ -22,7 +25,16 @@ export default function Home() {
 
         {/* 5. How It Works Section */}
         <HowItWorks />
+
+        {/* 6. Stats Section */}
+        <Stats />
+
+        {/* 7. Final CTA Section */}
+        <FinalCta />
       </main>
+
+      {/* 8. Global Footer */}
+      <Footer />
     </div>
   );
 }

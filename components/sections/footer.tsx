@@ -1,6 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
+import { DEMO_MAILTO_URL } from "@/lib/constants";
 
 interface FooterColumn {
   title: string;
@@ -12,22 +13,22 @@ const footerColumns: FooterColumn[] = [
     title: "Product",
     links: [
       { label: "Workflow Builder", href: "#features" },
-      { label: "Document Pipeline", href: "#pipeline" },
+      { label: "Document Pipeline", href: "#features" },
       { label: "Qorra", href: "#qorra" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "#about" },
-      { label: "Contact", href: "mailto:contact@onboard360.com" },
+      { label: "About", href: "#" },
+      { label: "Contact", href: DEMO_MAILTO_URL },
     ],
   },
   {
     title: "Legal",
     links: [
-      { label: "Privacy", href: "#privacy" },
-      { label: "Terms", href: "#terms" },
+      { label: "Privacy", href: "#" },
+      { label: "Terms", href: "#" },
     ],
   },
 ];
@@ -43,10 +44,9 @@ export function Footer() {
               href="/"
               className="flex items-center gap-2.5 text-text-primary hover:text-white transition-colors w-fit group"
             >
-              <div className="w-6 h-6 rounded-md bg-surface-elevated border border-border-regular flex items-center justify-center group-hover:border-border-strong transition-colors">
-                <div className="w-2 h-2 rounded-sm bg-accent" />
-              </div>
-              <span className="font-medium text-base tracking-tight text-text-primary">
+              {/* Monochromatic geometric mark matching navbar */}
+              <div className="w-5 h-5 rounded-full bg-linear-to-r from-white to-neutral-500 flex items-center justify-center group-hover:border-border-strong transition-colors" />
+              <span className="font-medium text-base tracking-tight text-white">
                 Onboard360
               </span>
             </Link>

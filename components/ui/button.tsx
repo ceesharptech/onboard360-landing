@@ -11,16 +11,16 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const variantStyles: Record<NonNullable<ButtonProps["variant"]>, string> = {
-  // Monochromatic Solid White Primary CTA (Linear "Sign up" style)
+  // Solid White Primary CTA (Linear clean style)
   primary:
-    "bg-white text-canvas font-medium border border-white/20 hover:bg-[#e2e4e6] active:scale-[0.98] shadow-[0_1px_2px_rgba(0,0,0,0.6)]",
-  // Translucent Dark Surface Secondary CTA
+    "bg-white text-canvas font-medium border border-white/20 hover:bg-[#e2e4e6] active:scale-[0.98] shadow-sm",
+  // Obsidian Secondary CTA (Linear clean style)
   secondary:
-    "bg-surface-elevated text-text-primary border border-border-regular hover:bg-surface-active hover:border-border-strong hover:text-white active:scale-[0.98] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]",
+    "bg-surface-elevated text-text-primary border border-border-regular hover:bg-surface-active hover:border-border-strong hover:text-white active:scale-[0.98] shadow-sm",
   // Ghost Text Link (Linear "Log in" style)
   ghost:
     "bg-transparent text-text-muted hover:text-text-primary hover:bg-surface/60 active:scale-[0.98] border border-transparent",
-  // Crisp Outline Variant
+  // Clean Outline Variant
   outline:
     "bg-transparent text-text-primary border border-border-regular hover:border-border-strong hover:bg-surface/50 active:scale-[0.98]",
 };
