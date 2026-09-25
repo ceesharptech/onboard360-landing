@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Onboard360" }],
   creator: "Eniola Amusu",
   openGraph: {
-    title: "Onboard360: The onboarding system for modern teams and agencies",
+    title: "Onboard360 | No more scattered checklists",
     description:
       "Turn scattered checklists, PDFs, and Slack threads into one unified onboarding system. Role-based workflow builder, automated document pipeline, and verified AI assistant.",
     url: "https://onboard360.vercel.app",
