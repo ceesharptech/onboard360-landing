@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://onboard360.vercel.app",
+    process.env.NEXT_PUBLIC_SITE_URL || "https://useonboard360.vercel.app",
   ),
   title: {
     default: "Onboard360: The onboarding system for modern teams and agencies",
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     siteName: "Onboard360",
     images: [
       {
-        url: "/images/hero-onb360.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Onboard360: The onboarding system for modern teams and agencies",
+        alt: "Onboard360 | No more scattered checklists",
       },
     ],
     locale: "en_US",

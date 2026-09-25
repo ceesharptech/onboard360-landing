@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { Button } from "@/components/ui/button";
@@ -116,8 +117,8 @@ export function Navbar() {
             className="flex items-center gap-2.5 text-text-primary hover:text-white transition-colors group"
           >
             {/* Monochromatic geometric mark */}
-            <div className="w-5 h-5 rounded-full bg-linear-to-r from-white to-neutral-500 flex items-center justify-center group-hover:border-border-strong transition-colors">
-              {/* <div className="w-2.5 h-2.5 rounded-sm bg-white" /> */}
+            <div className="flex items-center justify-cente">
+              <Image src="/images/onb360-logo.png" alt="Onboard360 Logo" className="w-5 h-5" width={32} height={32}/>
             </div>
             <span className="font-medium text-base tracking-tight text-white">
               Onboard360
